@@ -6,7 +6,7 @@
 #
 #    http://shiny.rstudio.com/
 #
-
+# 
 # Accessory code for half-violin plots ------------------------------------
 # We are using this code snippet, but there are other options for raincloud plots!
 source("https://raw.githubusercontent.com/datavizpyr/data/master/half_flat_violinplot.R")
@@ -43,17 +43,15 @@ ui <- fluidPage(
 server <- function(input, output) {
     
     output$raincloudPlot <- renderPlot({
-        # Palettes and theme ------------------------------------------------------
-        penpal <- ghibli_palette("SpiritedMedium",direction = -1)
+        # Palettes and theme
+        penpal <- ghibli::ghibli_palette("SpiritedMedium",direction = -1)
         pentheme <-  hrbrthemes::theme_ipsum_rc(base_size = 18) +
             theme(axis.title.x = element_text(size = rel(1.5)),
                   axis.title.y = element_text(size = rel(1.5)),
                   panel.grid.major.x = element_blank(),
                   panel.grid.minor.x = element_blank())
         
-        
-        # Plot stuff --------------------------------------------------------------
-        
+        # Plot
         p1 <- penguins %>% 
             filter(island %in% input$island) %>%
             ggplot(aes(x = sex, y = body_mass_g, fill = species)) +
