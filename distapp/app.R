@@ -1,4 +1,4 @@
-#
+# 
 # This is a Shiny web application. You can run the application by clicking
 # the 'Run App' button above.
 #
@@ -7,16 +7,20 @@
 #    http://shiny.rstudio.com/
 #
 # 
+
+# Libraries ---------------------------------------------------------------
+library(shiny)
+library(ggplot2)
+library(dplyr)
+library(palmerpenguins)
+
 # Accessory code for half-violin plots ------------------------------------
 # We are using this code snippet, but there are other options for raincloud plots!
 source("https://raw.githubusercontent.com/datavizpyr/data/master/half_flat_violinplot.R")
 
 
-library(shiny)
-library(palmerpenguins)
 
-
-# Define UI for application that draws a histogram
+# Define user interface ---------------------------------------------------
 ui <- fluidPage(
 
     # Application title
@@ -53,6 +57,7 @@ server <- function(input, output) {
         
         # Plot
         p1 <- penguins %>% 
+            filter(!is.na(sex)) %>%
             filter(island %in% input$island) %>%
             ggplot(aes(x = sex, y = body_mass_g, fill = species)) +
             geom_flat_violin(position = position_nudge(x = .1, y = 0), 
