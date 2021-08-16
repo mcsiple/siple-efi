@@ -14,6 +14,7 @@ install.packages(c("shiny",
 ```
 
 ## Other Shiny resources
+### More code
 If you want to explore more learning materials and exercises, check out my general shiny overview [repo](https://github.com/mcsiple/shinyoverview) collection of simple exercises. 
 
 This repo also contains example code for:
@@ -22,7 +23,7 @@ This repo also contains example code for:
 - putting live translation into your Shiny app using Appsilon's `shiny.i18n` [package](https://github.com/Appsilon/shiny.i18n)
 
 
-For reference, I have used:
+### Reference materials:
 
 [Mastering Shiny](https://mastering-shiny.org/) by Hadley Wickham for foundational learning
 
