@@ -1,8 +1,10 @@
 library(testthat)
+library(shinytest)
 source("distapp/app.R")
 
+
+# Example of a testServer() function --------------------------------------
 testServer(server, {
-  
   # Give input$island a value.
   session$setInputs(island = "Torgersen")
   
@@ -15,14 +17,12 @@ testServer(server, {
   cat("After adding another island to the inputs, numSelected is: ", numSelected(), "\n")
 })
 
-# In your testing folder, the test looks like this:
+
+# Using testServer() with testthat ----------------------------------------
+
+# If your app is part of a package, many of these tests will be in tests/
 testServer(server, {
   session$setInputs(island = c("Torgerson","Biscoe"))
   #cat("After adding another island to the inputs, numSelected is: ", numSelected(), "\n")
   expect_equal(numSelected(),2)
-})
-
-testServer(server, {
-  session$setInputs(island = c("Torgerson","Biscoe"))
-  expect_true(is.ggplot(output$raincloudPlot))
 })

@@ -6,6 +6,7 @@ To follow along and run the app on your own machine, install the following packa
 ```{r eval = FALSE}
 install.packages(c("shiny",
                    "dplyr",
+                   "shinytest",
                    "ggplot2",        #for plotting
                    "ghibli",         #for plotting
                    "palmerpenguins", #for plotting
