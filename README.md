@@ -1,4 +1,4 @@
-# A basic Shiny app for showing distributions and uncertainty in a basic dataset
+# Showing distributions and uncertainty in R and Shiny
 Code for a "bare bones" shiny app for the Ecological Forecasting Initiative (EFI). This talk is intended to give you a sampling of code and tools for communicating risk and uncertainty to a broad audience. I will focus primarily on communication with stakeholders, but these tools should be broadly applicable.
 
 ## Packages
@@ -12,3 +12,21 @@ install.packages(c("shiny",
                    "hrbrthemes"))    #for plotting
 
 ```
+
+## Other Shiny resources
+If you want to explore more learning materials and exercises, check out my general shiny overview [repo](https://github.com/mcsiple/shinyoverview) collection of simple exercises. 
+
+This repo also contains example code for:
+
+- using `learnr` to make interactive tutorials
+- putting live translation into your Shiny app using Appsilon's `shiny.i18n` [package](https://github.com/Appsilon/shiny.i18n)
+
+
+For reference, I have used:
+
+[Mastering Shiny](https://mastering-shiny.org/) by Hadley Wickham for foundational learning
+
+[Engineering Production-Grade Shiny apps](https://engineering-shiny.org/) from Colin Fay et al.
+
+RStudio's [Shiny tutorials](https://shiny.rstudio.com/tutorial/)
+
