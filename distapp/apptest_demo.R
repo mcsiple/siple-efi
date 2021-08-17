@@ -22,3 +22,7 @@ testServer(server, {
   # Check whether it works
   cat("After adding another island to the inputs, numSelected is: ", numSelected(), "\n")
 })
+
+
+# Running tests using testthat -------------------------------------------
+#shiny::runTests("distapp")
