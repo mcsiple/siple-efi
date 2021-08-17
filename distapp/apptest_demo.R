@@ -25,4 +25,7 @@ testServer(server, {
 
 
 # Running tests using testthat -------------------------------------------
+# Look for the next test in tests/testthat/test-server.R
+#
 #shiny::runTests("distapp")
+#runTests() looks in the tests/ directory and sources the .R files therein
