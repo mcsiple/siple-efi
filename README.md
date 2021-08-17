@@ -12,6 +12,7 @@ install.packages(c("shiny",
                    "palmerpenguins", #for plotting
                    "hrbrthemes"))    #for plotting
 
+remotes::install_github("ricardo-bion/ggradar") # for plotting
 ```
 
 ## Other Shiny resources
