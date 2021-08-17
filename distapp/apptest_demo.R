@@ -1,5 +1,11 @@
+
+# Demo 2: Writing tests for Shiny -----------------------------------------
+# This code assumes you have already created a Shiny app (we have!) but to make a Shiny app folder structure, you can start a new Shiny app with all the right folders and examples by using:
+# shinyAppTemplate("myapp")
+# If you select 1 from the list of options that comes up, ou will get a full file structure with templates included.
+
+
 library(testthat)
-library(shinytest)
 source("distapp/app.R")
 
 
@@ -15,14 +21,4 @@ testServer(server, {
   
   # Check whether it works
   cat("After adding another island to the inputs, numSelected is: ", numSelected(), "\n")
-})
-
-
-# Using testServer() with testthat ----------------------------------------
-
-# If your app is part of a package, many of these tests will be in tests/
-testServer(server, {
-  session$setInputs(island = c("Torgerson","Biscoe"))
-  #cat("After adding another island to the inputs, numSelected is: ", numSelected(), "\n")
-  expect_equal(numSelected(),2)
 })
